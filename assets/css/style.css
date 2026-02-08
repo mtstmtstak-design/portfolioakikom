@@ -695,7 +695,7 @@ body.dark .back-line-c {
   border: none;
   background: #333;
   color: #fff;
-  font-size: 18px;
+  font-size: 23px;
   cursor: pointer;
   z-index: 10;
 }
@@ -735,6 +735,10 @@ work ページ
 
 body.dark .work-title {
   color: #7e7e7e;
+}
+
+.open-ovl-text{
+  text-decoration: none;
 }
 
 /*-----------------------------------------------------------------------------------

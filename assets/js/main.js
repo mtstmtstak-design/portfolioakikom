@@ -28,61 +28,68 @@ const windowEl = document.querySelector('.window');
 let current = 1; // 初期表示：2ページ目
 
 function update() {
+  if (!windowEl || !track) return;
+
   const width = windowEl.offsetWidth;
   track.style.transform = `translateX(-${current * width}px)`;
 
-  // 端ページでは非表示
   prevBtn.style.display = current === 0 ? 'none' : 'block';
   nextBtn.style.display = current === pages.length - 1 ? 'none' : 'block';
 }
 
-prevBtn.addEventListener('click', () => {
-  if (current > 0) {
-    current--;
-    update();
-  }
-});
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener("click", () => {
+    if (current > 0) {
+      current--;
+      update();
+    }
+  });
 
-nextBtn.addEventListener('click', () => {
-  if (current < pages.length - 1) {
-    current++;
-    update();
-  }
-});
+  nextBtn.addEventListener("click", () => {
+    if (current < pages.length - 1) {
+      current++;
+      update();
+    }
+  });
+
+  window.addEventListener("resize", update);
+}
 
 window.addEventListener('resize', update);
 
-const openBtn = document.getElementById('openModal');
-  const modal = document.getElementById('modal');
+const openBtns = document.querySelectorAll('.openModal');
+const modal = document.getElementById('modal');
+
+// ★ 追加：modalがあるページだけ実行
+if (modal) {
+  const modalImg = document.getElementById('modalImg');
   const closeBtn = modal.querySelector('.modal__close');
   const overlay = modal.querySelector('.modal__overlay');
+  const modalBody = modal.querySelector('.modal__body');
 
-  openBtn.addEventListener('click', () => {
-    modal.classList.add('is-open');
+  // モーダルを開く
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const imgSrc = btn.dataset.img;
+      modalImg.src = imgSrc;
+
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      modalBody.scrollTop = 0;
+    });
   });
 
-  closeBtn.addEventListener('click', () => {
+  // 閉じる共通処理
+  const closeModal = () => {
     modal.classList.remove('is-open');
-  });
+    document.body.style.overflow = '';
+  };
 
-  overlay.addEventListener('click', () => {
-    modal.classList.remove('is-open');
-  });
-  
-  openBtn.addEventListener('click', () => {
-  modal.classList.add('is-open');
-  document.body.style.overflow = 'hidden'; // ← 追加
-});
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+}
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('is-open');
-  document.body.style.overflow = ''; // ← 追加
-});
 
-overlay.addEventListener('click', () => {
-  modal.classList.remove('is-open');
-  document.body.style.overflow = ''; // ← 追加
-});
 
 // ★ 初期表示時に必ず呼ぶ
 update();
