@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKIKOM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <a href="../index.html">
+      <h2>AKI<br class="mobil-on">KOM</h2>
+    </a>
+    <div>
+      <a href="../work.html">work</a>
+      <a href="../about.html">about</a>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <div class="works">
+    <img src="../assets/img/kanri.jpg" class="works-img-main" alt="">
+    <div class="works-title">
+      <h1>案件・メンバータスク管理ダッシュボード</h1>
+      <p>ー 重要な案件とメンバー状況を直感的に見える化し、チームの案件管理をスムーズに ー</p>
+    </div>
+    <div class="works-caption">
+      <p>画面デザイン　2026.2</p>
+      <p>複数案件を同時に進めるチーム業務では、「締め切りが近い案件」や「負荷が高い案件」が埋もれやすく、優先順位が曖昧になりがち。
+        <br>
+        そこで、案件の重要度とメンバーの状況をひと目で把握できるように、
+        個人ダッシュボード / チームダッシュボード / 案件一覧 / 案件詳細を中心に、案件管理ツールのUIを設計した。
+      </p>
+      <div class="works-caption-in">
+        <p>●制作範囲<br>
+          　提案 / 画面デザイン　　　1週間
+        </p>
+        <p class="works-mr">●制作ツール<br>
+          　Figma　　　　　　　
+        </p>
+      </div>
+    </div>
+    <button class="openModal open-ovl" data-img="../assets/img/works11-6.jpg">
+      <p>全体レイアウトを見る</p>
+      <div class="popup-ovl back-line-d"></div>
+    </button>
+    <img src="../assets/img/works11-1.jpg" class="works-img-main" alt="">
+     <div class="works-caption-in2">
+      <div class="works-caption-in2-in sm-column">
+        <img src="../assets/img/works11-2.png" alt="">
+        <p>
+          <span>
+            <strong>重要案件が自然に目に入る構成</strong><br>
+            締め切りが近い案件や負荷が高い案件を上部に集約し、優先順位を迷わない設計にした。
+          </span>
+        </p>
+      </div>
+      <div class="works-caption-in2-in">
+        <p>
+          <span>
+            <strong>ステータス更新を“軽く”する</strong><br>
+            案件編集とは別に、ステータスだけを素早く変更できるUIにして更新の手間を減らした。
+          </span>
+        </p>
+        <img src="../assets/img/works11-3.png" alt="">
+      </div>
+      <div class="works-caption-in2-in sm-column">
+        <img src="../assets/img/works11-4.png" alt="">
+        <p>
+          <span>
+            <strong>チーム状況を見える化</strong><br>
+            メンバーの負荷と手持ち案件の重要度を並べて表示し、偏りや詰まりを把握しやすくした。
+          </span>
+        </p>
+      </div>
+      <div class="works-caption-in2-in">
+        <p>
+          <span>
+            <strong>登録を面倒にしない</strong><br>
+            個人ダッシュボード内に簡易登録フォームを置き、ページ遷移なしで案件を追加できるようにした。
+          </span>
+        </p>
+        <img src="../assets/img/works11-5.png" alt="">
+      </div>
+    </div>
+    <table class="work-table">
+      <tr>
+        <td class="table-title">目的</td>
+        <td>
+          <ul>
+            <li>締め切りが近い案件を見落とさない状態をつくる</li>
+            <li>作業負荷が高い案件を可視化し、優先順位を判断しやすくする</li>
+            <li>メンバーごとの稼働状況を把握し、チーム内の偏りを減らす</li>
+            <li>登録・更新が面倒で情報が古くなる問題を防ぐ</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-title">ターゲット</td>
+        <td>
+          <ul>
+            <li>案件担当者（個人でタスクを進めるメンバー）</li>
+            <li>チームリーダー</li>
+            <li>複数案件を同時進行するチーム・部署</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-title">課題</td>
+        <td>
+          <ul>
+            <li>案件数が増えると、一覧だけでは重要度が判断しづらい</li>
+            <li>締め切りが近い案件が埋もれ、対応が後手になりやすい</li>
+            <li>作業負荷の高い案件が属人化し、メンバー間で偏りが発生する</li>
+            <li>ステータス更新が手間だと、情報が最新にならない</li>
+            <li>案件詳細の確認が多いと、ページ遷移がストレスになる</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-title">デザイン・情報設計</td>
+        <td>
+          <ul>
+            <li>締め切りが近い案件」「負荷が高い案件」を上部に集約し、優先順位が自然に分かる構成にした</li>
+            <li>案件登録をスムーズにするため、個人ダッシュボード内に簡易登録フォームを設置した</li>
+            <li>ステータスは編集画面とは分け、一覧・詳細どちらからでも直感的に更新できる設計にした</li>
+            <li>チームダッシュボードでは、案件状況＋メンバー負荷（余裕あり / 普通 / 忙しい）を並べて表示し、偏りを把握しやすくした</li>
+            <li>案件詳細はページ遷移ではなくポップアップ表示にし、確認作業の負担を軽減した</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <button class="openModal open-ovl" data-img="../assets/img/works11-6.jpg">
+      <p>全体レイアウトを見る</p>
+      <div class="popup-ovl back-line-d"></div>
+    </button>
+    <div class="main-container works-other-mt">
+      <h2>Other Works</h2>
+      <div class="container">
+       <a class="card" href="../works/work02.html">
+            <img src="../assets/img/ud-notud.jpg" alt="" />
+            <h1 class="card-title">UDデザイン比較体験サイト</h1>
+            <p class="card-text">企画提案/画面デザイン</p>
+          </a>
+          <a class="card" href="../works/work01.html">
+            <img src="../assets/img/ucda-lp.jpg" alt="" />
+            <h1 class="card-title">イベント出展 特設サイト制作</h1>
+            <p class="card-text">画面デザイン/コーディング</p>
+          </a>
+          <a class="card" href="../works/work08.html">
+            <img src="../assets/img/byoin.jpg" alt="" />
+            <h1 class="card-title">医療サイトのUI/UX改善とUD対応</h1>
+            <p class="card-text">画面デザイン/コーディング/解説資料作成</p>
+          </a>
+          <a class="card" href="../works/work05.html">
+          <img src="../assets/img/tirashi.jpg" alt="">
+          <h1 class="card-title">情報整理により可読性を高めたサービス案内チラシ</h1>
+          <p class="card-text">グラフィックデザイン/情報整理</p>
+        </a>
+      </div>
+    </div>
+    <a href="../work.html" class="back-link">
+      <p>一覧を見る</p>
+      <div class="back-line back-line-a"></div>
+    </a>
+  </div>
+
+   <div class="modal" id="modal">
+  <div class="modal__overlay"></div>
+
+  <div class="modal__content">
+    <button class="modal__close" aria-label="閉じる">×</button>
+
+    <div class="modal__body">
+      <img id="modalImg" src="" alt="作品キャプチャ">
+    </div>
+  </div>
+</div>
+
+  <footer>@2026 AKIKOM</footer>
+
+
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+
+
+
+</html>
